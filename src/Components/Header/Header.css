@@ -1,0 +1,19 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(23, 23, 23);
+}
+header *{
+    color: white;
+}
+header >div{
+    display: flex;
+}
+img{
+    height: 100px;
+    margin-right:10px ;
+}

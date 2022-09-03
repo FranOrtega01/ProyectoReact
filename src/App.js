@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header'
+import {Button} from './Components/Button/Boton'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        Docu de React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  const nombre = 'Alejandro'
+  const apellido = 'Fernandez'
+  return(
+    <>
+      <Header nombre={nombre} apellido={apellido} id='1'>
+      </Header>
+      <Button/>
 
-export default App;
+    </>
+    )
+  }
+
+export default App
