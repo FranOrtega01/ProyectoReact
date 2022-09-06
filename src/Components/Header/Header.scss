@@ -6,14 +6,16 @@ header{
     padding: 10px;
     box-sizing: border-box;
     background-color: rgb(23, 23, 23);
+    >div{
+        display: flex;
+        align-items: center;
+    }
+    *{
+        color: white;
+    }
+    img{
+        height: 100px;
+        margin-right:10px ;
+    }
 }
-header *{
-    color: white;
-}
-header >div{
-    display: flex;
-}
-img{
-    height: 100px;
-    margin-right:10px ;
-}
+
