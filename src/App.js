@@ -1,17 +1,16 @@
 import './App.scss';
 import Header from './Components/Header/Header'
-import {Button} from './Components/Button/Boton'
+// import Contador from './Components/Contador/Contador'
+// import Usuarios from './Components/Usuarios/Usuarios'
 import {ItemListContainer} from './Components/ItemListContainer'
 
 const App = () => {
-  const nombre = 'Alejandro'
+  const nombre = 'Ramón'
   const apellido = 'Fernandez'
   return(
     <>
       <Header nombre={nombre} apellido={apellido} id='1'></Header>
       <ItemListContainer nombre={nombre}/>
-      {/* <Button/> */}
-      
     </>
     )
   }
