@@ -4,7 +4,7 @@ export const Nav = ({categorias}) => {
     return(
         <nav>        
             {categorias.map((categoria) => {
-                return <a style={style.nav} key={categoria.id} href="">{categoria.nombre}</a>
+                return <a style={style.nav} key={`${categoria.id} - ${categoria.nombre}`} href="">{categoria.nombre}</a>
             })}
         </nav>
     )

@@ -6,10 +6,10 @@ import {CartWidget} from '../CartWidget/CartWidget'
 
 const Header = ({children}) => {
     const categorias = [
-        {nombre:'Remeras', id:0}, 
-        {nombre:'Zapatillas' , id:1}, 
-        {nombre:'Chanclas' , id:2},
-        {nombre:'Gorras' , id:3}
+        {nombre:'Ski', id:0}, 
+        {nombre:'Snowboard' , id:1}, 
+        {nombre:'Mujeres' , id:2},
+        {nombre:'Hombres' , id:3}
     ];
     return(
         <header>
