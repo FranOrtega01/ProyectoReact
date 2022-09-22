@@ -4,12 +4,12 @@ import './Header.scss';
 import {Nav} from './Nav/Nav';
 import {CartWidget} from '../CartWidget/CartWidget'
 
-const Header = ({children}) => {
+const Header = () => {
     const categorias = [
-        {nombre:'Ski', id:0}, 
-        {nombre:'Snowboard' , id:1}, 
-        {nombre:'Mujeres' , id:2},
-        {nombre:'Hombres' , id:3}
+        {nombre:'Men', id:0}, 
+        {nombre:'Women' , id:1}, 
+        {nombre:'Jewelery' , id:2},
+        {nombre:'Electronics' , id:3}
     ];
     return(
         <header>
@@ -19,7 +19,6 @@ const Header = ({children}) => {
             </div>
             <Nav categorias={categorias}/>
             <CartWidget/>
-            {children}
         </header>
     )
 }

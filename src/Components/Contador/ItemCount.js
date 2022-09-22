@@ -7,17 +7,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [count, setCount] = useState(initial)
     const [numero, setNumero] = useState(0)
 
-
     
     useEffect(() => {
         setNumero (numero + 1)
-        // const intervalo = setInterval(() => {
-        //     console.log('guti')
-        // }, 1000);
-
-        // return (() => {
-        //     clearInterval(intervalo)
-        // })
     }, [count])
 
 

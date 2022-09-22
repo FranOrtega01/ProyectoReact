@@ -6,22 +6,18 @@ import Header from './Components/Header/Header'
 // import Contador from './Components/Contador/Contador'
 // import Usuarios from './Components/Usuarios/Usuarios'
 import {ItemListContainer} from './Components/ItemListContainer/ItemListContainer'
+import { ItemDetailContainer } from './Components/ItemDetailContainer/ItemDetailContainer';
 
 
 const App = () => {
 
-  const [show, setShow] = useState(true)
-
   const greetings = 'Mirá nuestros artículos destacados'
-
-  const alternar = () => {
-    setShow(!show);
-  }
   
   return(
     <>
-      <Header id='1'></Header>
+      <Header></Header>
       <ItemListContainer greetings={greetings}/>
+      <ItemDetailContainer />
     </>
     )
   }
