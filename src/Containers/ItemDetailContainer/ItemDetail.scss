@@ -1,7 +1,7 @@
 .cardDetail{
     width: 90%;
-    min-height: 600px;
-    margin: 0 auto;
+    min-height: 800px;
+    margin: 50px auto;
     border-radius: 15px;
     display: flex;
     padding: 50px 0 50px 50px;
@@ -20,8 +20,11 @@
 }
 .detailImg{
     width: 35%;
+    display: flex;
     img{
+        margin: auto;
         width: 100%;
+        border-radius: 5px;
     }
 }
 .detailInfo{
@@ -36,4 +39,18 @@
     line-height: 1.5;
     margin-top: 100px;
 
+}
+
+.btnTerminarCompra{
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    width: 380px;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 20px;
+    background-color: rgb(40, 114, 212);
+    color: #e5e7ea;
+    cursor: pointer;
 }

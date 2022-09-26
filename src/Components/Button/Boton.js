@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Button = ({text}) => {
+export const Button = ({text, btnClass}) => {
     return(
         <>
-            <button>{text}</button>
+            <button className={btnClass}> {text}</button>
         </>
     )
 }

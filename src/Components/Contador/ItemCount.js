@@ -14,13 +14,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
 
     const Suma = () => {
-        // count < stock ? setCount(count + 1) : MySwal.fire({html: <p>No hay más stock!</p>})
         setCount(count + 1)
     }
     const Resta = () => {
-        // count > 1 ? setCount(count - 1) : MySwal.fire({html: <p>El mínimo es 1!</p>})np
         setCount(count - 1)
-
     }
 
     return(
@@ -31,7 +28,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <p>{count}</p>
                     <button id="Suma" disabled={count >= stock} onClick={Suma}>+</button>
                 </div>
-                <button onClick={onAdd}>Agregar al carrito</button>
+                <button onClick={() => onAdd(numero)}>Agregar al carrito</button>
             </div>
         </>
     )

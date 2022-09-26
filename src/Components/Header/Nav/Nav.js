@@ -1,18 +1,12 @@
 import React from "react";
+import {Link, NavLink} from 'react-router-dom'
 
 export const Nav = ({categorias}) => {
     return(
         <nav>        
             {categorias.map((categoria) => {
-                return <a style={style.nav} key={`${categoria.id} - ${categoria.nombre}`} href="">{categoria.nombre}</a>
+                return <NavLink key={`${categoria.id} - ${categoria.nombre}`} to={categoria.to}>{categoria.nombre}</NavLink>
             })}
         </nav>
     )
-}
-
-const style = {
-    nav:{
-        textDecoration: 'none',
-        padding:'0 20px',
-    }
 }
