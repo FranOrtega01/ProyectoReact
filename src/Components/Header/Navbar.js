@@ -9,10 +9,10 @@ import {Link} from 'react-router-dom'
 
 export const Navbar = () => {
     const categorias = [
-        {nombre:'Camperas', id:0, to: '/categoria/camperas'}, 
-        {nombre:'Remeras' , id:1, to: '/categoria/remeras'}, 
-        {nombre:'Pantalones' , id:2, to: '/categoria/pantalones'},
-        {nombre:'Zapatillas' , id:3, to: '/categoria/zapatillas'}
+        {nombre:`Mens's clothing`, id:0, to: `/products/category/men's clothing`}, 
+        {nombre: `Women's clothing` , id:1, to: `/products/category/women's clothing`}, 
+        {nombre:'Jewelery' , id:2, to: '/products/category/jewelery'},
+        {nombre:'Electronics' , id:3, to: '/products/category/electronics'}
     ];
     return(
         <header>
@@ -21,7 +21,7 @@ export const Navbar = () => {
                 <h1>Brand Store</h1>
             </Link>
             <Nav categorias={categorias}/>
-            <Link to={'/cart'}>
+            <Link to={'/cart'} className='cartWidget'>
                 <CartWidget/>
             </Link>
         </header>
@@ -30,5 +30,7 @@ export const Navbar = () => {
 
 const logoStyle = {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    textDecoration: 'none'
 }
+

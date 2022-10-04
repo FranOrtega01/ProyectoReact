@@ -2,19 +2,21 @@ import './ItemDetail.scss'
 import ItemCount from '../../Components/Contador/ItemCount'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { useParams } from 'react-router-dom'
-import { customFetch } from "../../assets/fetch";
-import { productsList } from "../../assets/products";
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {Link} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { CartContext } from '../../Context/CustomContext';
+
 
 export const ItemDetail = ({producto}) => {
 
-    function onAdd(numero){
-        setTerminarCompra(true)
-        toast.dark(`Agregado ${numero} ${producto.title}`, {
+    const [terminarCompra, setTerminarCompra] = useState(false);
+    const {add} = useContext(CartContext)
+
+    function onAdd(count){
+        // setTerminarCompra(true)
+        toast.dark(`Agregado ${count} ${producto.title}`, {
             position: "bottom-right",
             autoClose: 1000,
             hideProgressBar: true,
@@ -23,15 +25,14 @@ export const ItemDetail = ({producto}) => {
             draggable: true,
             progress: undefined,
             });
+        add(producto, count)
         }
     
-    const [terminarCompra, setTerminarCompra] = useState(false);
-
     return(
         <>
             <div className="cardDetail">
                 <div className='detailImg'>
-                    <img src={producto.img} alt="" />
+                    <img src={producto.image} alt="" />
                 </div> 
                 <div className='detailInfo'>
                     <h3>{producto.title}</h3>

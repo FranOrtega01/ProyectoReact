@@ -17,18 +17,16 @@ export const ItemDetailContainer = () => {
 
     let { productoId } = useParams()
 
+    const URL_BASE = `https://fakestoreapi.com/products`
 
     useEffect(() => {
         setLoad(true)
         const getItem = async () => {
             try{
-                // const respuesta = await fetch(`https://api.escuelajs.co/api/v1/products/18`);
-                // const data = await respuesta.json();
-                // // console.log(data);
-                // const producto = {...data, stock: Math.floor(Math.random()*100)}
-                const respuesta = await customFetch(productsList[productoId - 1]);
-                // const data = await respuesta.json();
-                setProduct(respuesta)
+                const respuesta = await fetch(`${URL_BASE}/${productoId}`);
+                const data = await respuesta.json();
+                const producto = {...data, stock: Math.floor(Math.random()*100)}
+                setProduct(producto)
                 setLoad(false)
             }
             catch{
