@@ -15,7 +15,7 @@ export const ItemDetail = ({producto}) => {
     const {add} = useContext(CartContext)
 
     function onAdd(count){
-        // setTerminarCompra(true)
+        setTerminarCompra(true)
         toast.dark(`Agregado ${count} ${producto.title}`, {
             position: "bottom-right",
             autoClose: 1000,
