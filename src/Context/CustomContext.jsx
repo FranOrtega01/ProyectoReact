@@ -7,9 +7,10 @@ const CustomProvider = ({children}) => {
     //State
     const [cart, setCart] = useState([])
     const [cartNumber, setCartNumber] = useState(0)
+    const [cartPrice, setCartPrice] = useState(0)
+
     //Funciones cart
     const add = (product, cantidad) => {
-        console.log(inList(product.id));
         if(inList(product.id)){ //Busca el index y la cantidad del item, luego lo saca y lo agrega sumandole la cantidad anterior
             const index = cart.findIndex(item => item.product.id == product.id)
             const prevQty = cart[index].cantidad;
@@ -18,6 +19,7 @@ const CustomProvider = ({children}) => {
         }else{
             setCart([...cart, {product, cantidad}])
         }
+        refreshPrice(product)
     }
 
     const remove = (id) => {//Borra el item
@@ -35,15 +37,19 @@ const CustomProvider = ({children}) => {
         const cartNum = cart.reduce((acumulador, {cantidad}) => acumulador + cantidad, 0);
         setCartNumber(cartNum)
     }
+    const refreshPrice = () => {
+        const cartTotalPrice = cart.reduce((acumulador,{product, cantidad}) => acumulador + product.price*cantidad , 0)
+        setCartPrice(cartTotalPrice)
+    }
 
     //Effect
     useEffect(() => {
         refreshNum()
-        console.log(cart);
+        refreshPrice()
     }, [cart])
 
     return( 
-        <CartContext.Provider value={{cart, cartNumber, add, remove}}>
+        <CartContext.Provider value={{cart, cartNumber, cartPrice, add, remove, reset}}>
             {children}
         </CartContext.Provider>
     )

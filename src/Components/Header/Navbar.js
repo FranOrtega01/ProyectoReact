@@ -5,15 +5,17 @@ import {Nav} from './Nav/Nav';
 import {CartWidget} from '../CartWidget/CartWidget'
 import {Link} from 'react-router-dom'
 
-
-
+const firstToUpperCase = word => {
+    const str = word;
+    const str2 = str.charAt(0).toUpperCase() + str.slice(1);
+    return str2
+}
 export const Navbar = () => {
-    const categorias = [
-        {nombre:`Mens's clothing`, id:0, to: `/products/category/men's clothing`}, 
-        {nombre: `Women's clothing` , id:1, to: `/products/category/women's clothing`}, 
-        {nombre:'Jewelery' , id:2, to: '/products/category/jewelery'},
-        {nombre:'Electronics' , id:3, to: '/products/category/electronics'}
-    ];
+
+const categoriasList =['snowboard', 'ski', 'ropa', 'bolsos']
+const categorias = []
+
+categoriasList.map(cat => categorias.push({nombre:`${firstToUpperCase(cat)}`, id:0, to: `/products/category/${cat}`}))
     return(
         <header>
             <Link style={logoStyle} to='/'>

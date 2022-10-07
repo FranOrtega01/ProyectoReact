@@ -5,14 +5,14 @@ export const CartItem = ({item, remove}) => {
 
     return(
     <div className="cartCard">
-        <img src={product.image} alt={product.title} />
+        <img src={product.img} alt={product.title} />
         <div>
             <h2>{product.title}</h2>
             <p>Price: <span>${product.price}</span></p>
-            <p>Quantity: <span>{item.cantidad}</span></p>
+            <p>Quantity: <span>{item.cantidad}</span> (${product.price*item.cantidad})</p>
+
             <div>
                 <button onClick={()=> remove(product.id)}>Borrar Item</button>
-                <button>Comprar Ahora</button>
             </div>
         </div>
     </div>

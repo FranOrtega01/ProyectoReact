@@ -5,6 +5,7 @@ import { CartContext } from '../../Context/CustomContext';
 export const CartWidget = () => {
 
     const {cartNumber} = useContext(CartContext)
+
     return (
         <>
             <span>{cartNumber}</span>

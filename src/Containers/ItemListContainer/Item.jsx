@@ -6,7 +6,7 @@ export const Item = ({product}) => {
 
     return(
         <div className="productCard">
-            <img src={product.image} alt="" />
+            <img src={product.img} alt="" />
             <h3>{product.title}</h3>
             <span>{`$${product.price}`}</span>
             <Link to={`/products/${product.id}`}> Ver más </Link>

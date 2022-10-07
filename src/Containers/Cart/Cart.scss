@@ -1,6 +1,28 @@
+.cartSection{
+    width: 80%;
+    margin: 0 auto;
+}
+.terminarCompra{
+    display: flex;
+    justify-content: flex-end;
+    margin-block:50px;
+    p{
+        margin-right: 15px; 
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
+.cartTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartReset{
+    cursor: pointer;
+}
 .cartCard{
     margin: 15px auto;
-    width: 85%;
+
     height:350px ;
     display: flex;
     border-radius: 8px;
@@ -44,10 +66,7 @@
             font-weight: 500;
             background: none;
             cursor: pointer;
-            transition: all 200ms;
-            &:first-child{
-                border-right: 1px solid black;
-            }
+            transition: all 100ms;
             &:hover{
                 color: rgb(33, 156, 33);
             }
