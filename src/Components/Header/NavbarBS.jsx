@@ -7,7 +7,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { CartWidget } from '../CartWidget/CartWidget'
 import { useAuth } from '../../Context/AuthContext';
 import './Header.scss';
-import logo from '../../assets/descarga.png';
+import logo from '../../assets/logo.png';
 
 
 export function NavbarBS({brand, firstToUpperCase}){
