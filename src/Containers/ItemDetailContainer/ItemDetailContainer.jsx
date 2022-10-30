@@ -1,4 +1,4 @@
-import React , { useEffect, useState} from "react";
+import React , { useEffect, useState } from "react";
 import { ItemDetail } from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import CircularIndeterminate from '../../Components/Spinner/Spinner';
@@ -43,5 +43,4 @@ export const ItemDetailContainer = () => {
             <ItemDetail producto= {product} />}
         </>
     )
-
 }

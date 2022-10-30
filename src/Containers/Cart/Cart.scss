@@ -1,3 +1,4 @@
+
 .cartSection{
     width: 80%;
     margin: 0 auto;
@@ -5,11 +6,27 @@
 .terminarCompra{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin-block:50px;
     p{
+        margin: 0;
         margin-right: 15px; 
         font-weight: bold;
         font-size: 30px;
+    }
+    >button{
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        padding: 20px;
+        border-radius: 4px;
+        font-size: 20px;
+        background-color: rgb(40, 114, 212);
+        color: #e5e7ea;
+        cursor: pointer;
+        &:hover{
+            color: #e5e7ea;
+        }
     }
 }
 .cartTitle{
@@ -73,4 +90,14 @@
         }
     }
     
+}
+
+.btnComprarComo{
+    margin:26px 0 6px 0  ;
+    margin-left: auto;;
+}
+
+
+#cartForm input{
+    margin-right: 10px;
 }

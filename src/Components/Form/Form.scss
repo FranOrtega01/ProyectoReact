@@ -1,0 +1,23 @@
+#cartForm{
+    display: grid;
+    grid-template-areas: 
+    'nombre apellido'
+    'email email';
+    input{
+        padding: 4px;
+        margin: 5px;
+        outline: none;
+        border: 1px solid rgb(165, 161, 161);
+        border-radius: 4px;
+    }
+}
+
+.nombre{
+    grid-area: nombre;
+}
+.apellido{
+    grid-area: apellido;
+}
+.email{
+    grid-area: email;
+}

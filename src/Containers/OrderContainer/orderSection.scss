@@ -1,0 +1,17 @@
+.order{
+    h5, p{
+        margin: 10px 0;
+    }
+    div{
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px){
+    .order{
+        flex-direction: column;
+        img{
+            object-fit: contain;
+        }
+    }
+}

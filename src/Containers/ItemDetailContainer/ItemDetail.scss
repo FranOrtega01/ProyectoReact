@@ -1,3 +1,6 @@
+.cardSection{
+    container-type: inline-size;
+}
 .cardDetail{
     width: 90%;
     min-height: 800px;
@@ -19,12 +22,12 @@
 
 }
 .detailImg{
-    width: 35%;
     display: flex;
+    position: relative;
     img{
         margin: auto;
-        width: 100%;
         border-radius: 5px;
+        max-height: 600px;
     }
 }
 .detailInfo{
@@ -53,4 +56,64 @@
     background-color: rgb(40, 114, 212);
     color: #e5e7ea;
     cursor: pointer;
+    &:hover{
+        color: #e5e7ea;
+    }
+}
+
+.detailSubImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    img{
+        height: 75px;
+        margin: 10px 0;
+        cursor: pointer;
+        position: relative;
+        opacity: .7;
+    }
+}
+
+img.current{
+    border: 1px solid rgb(33, 156, 33);
+    opacity: 1;
+
+}
+
+.arrowFwd, .arrowBack{
+    position:absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arrowBack{
+    left: 0;
+}
+.arrowFwd{
+    right: 0;
+}
+
+
+@container (max-width: 991px){
+    .cardDetail{
+        flex-direction: column;
+        align-items: center;
+        padding: 50px     
+    }
+    .detailSubImg{
+        flex-direction:row;
+        align-self: flex-end;
+        margin: 0;
+        margin-bottom: 80px;
+    }
+    .detailInfo{
+        padding: 0;
+    }
+    .detailInfo h3{
+        margin: 16px 0;
+    }
+    .detailDescription{
+        margin: 16px 0
+    }
 }

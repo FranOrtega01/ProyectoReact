@@ -1,11 +1,12 @@
 import React, {createContext, useState} from "react";
 import { useEffect } from "react";
+import { useLocalStorage } from '../useLocalStorage'
 
 export const CartContext = createContext(); 
 
-const CustomProvider = ({children}) => {
+export const CartProvider = ({children}) => {
     //State
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useLocalStorage('cart', [])
     const [cartNumber, setCartNumber] = useState(0)
     const [cartPrice, setCartPrice] = useState(0)
 
@@ -48,11 +49,11 @@ const CustomProvider = ({children}) => {
         refreshPrice()
     }, [cart])
 
+
+
     return( 
         <CartContext.Provider value={{cart, cartNumber, cartPrice, add, remove, reset}}>
             {children}
         </CartContext.Provider>
     )
 }
-
-export default CustomProvider

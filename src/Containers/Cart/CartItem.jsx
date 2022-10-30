@@ -5,7 +5,7 @@ export const CartItem = ({item, remove}) => {
 
     return(
     <div className="cartCard">
-        <img src={product.img} alt={product.title} />
+        <img src={product.img[0]} alt={product.title} />
         <div>
             <h2>{product.title}</h2>
             <p>Price: <span>${product.price}</span></p>

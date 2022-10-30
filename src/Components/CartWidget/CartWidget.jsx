@@ -1,6 +1,6 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useContext } from 'react';
-import { CartContext } from '../../Context/CustomContext';
+import { CartContext } from '../../Context/CartContext';
 
 export const CartWidget = () => {
 
@@ -9,7 +9,7 @@ export const CartWidget = () => {
     return (
         <>
             <span>{cartNumber}</span>
-            <ShoppingCartIcon color="success" fontSize='large'/>
+            <ShoppingCartIcon fontSize='large'/>
         </>
     )
 }

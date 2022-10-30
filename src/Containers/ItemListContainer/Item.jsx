@@ -6,7 +6,7 @@ export const Item = ({product}) => {
     return(
         <div className="productCard">
             {(product.stock <= 10 && product.stock > 0 ) && <p className='pocoStock'>{product.stock} restantes!</p>  }
-            <img src={product.img} alt="" />
+            <img className='img-fluid' src={product.img[0]} alt={product.title} />
             <h3>{product.title}</h3>
             <p>${product.price}</p>
             {product.stock > 0 ? <Link to={`/products/${product.id}`}> Ver más </Link> : <p>No hay stock!</p> }
