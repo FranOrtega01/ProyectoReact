@@ -25,6 +25,7 @@ Este proyecto fue seteado con [Create React App](https://create-react-app.dev/)
 - [MUI - Icons Materials](https://mui.com/material-ui/material-icons/)
 - [Toastify](https://fkhadra.github.io/react-toastify/introduction/)
 - [Sweet Alert](https://sweetalert2.github.io/recipe-gallery/sweetalert2-react.html)
+- [YUP](https://www.npmjs.com/package/yup)
 - [Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/)
 - [Firebase](https://firebase.google.com/?gclid=Cj0KCQjwnvOaBhDTARIsAJf8eVOL_YZ3s_J914TBdvkjV5eHx3RVWNVvaFQ10WIY8zGQmtHsBmfATKkaAvESEALw_wcB&gclsrc=aw.ds) (Servicio de DataBase)
 
