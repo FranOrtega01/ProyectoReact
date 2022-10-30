@@ -6,13 +6,14 @@ Este proyecto fue seteado con [Create React App](https://create-react-app.dev/)
 
 ## Funciones incluidas:
 
-- Configuración del Routing usando [React Router](https://reactrouter.com/en/main):
+- Configuración del Routing usando [React Router](https://reactrouter.com/en/main)
 
      Rutas:
-     >Navbar para navegar entre las categorias.
-     >Detalle de cada producto clickeando en "Ver más".
-     >Home, Cart, Buscar compra por ID.
-     >Sign Up, Log In, Restablecer contraseña, Perfi.
+
+     - Navbar para navegar entre las categorias.
+     - Detalle de cada producto clickeando en "Ver más".
+     - Home, Cart, Buscar compra por ID.
+     - Sign Up, Log In, Restablecer contraseña, Perfil, Actualizar perfil.
 
 - Añadir productos al carrito almacenandolos en el LocalStorage.
 - Crear un usuario e ingresar mediante email y contraseña. Restablecer la contraseña. Cambiar datos del usuario (Contraseña, nombre, email)
