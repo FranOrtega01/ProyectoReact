@@ -13,7 +13,7 @@ export const CartProvider = ({children}) => {
     //Funciones cart
     const add = (product, cantidad) => {
         if(inList(product.id)){ //Busca el index y la cantidad del item, luego lo saca y lo agrega sumandole la cantidad anterior
-            const index = cart.findIndex(item => item.product.id == product.id)
+            const index = cart.findIndex(item => item.product.id === product.id)
             const prevQty = cart[index].cantidad;
             const newCart = cart.filter(item => item !== cart[index])
             setCart([...newCart, {product, cantidad: cantidad + prevQty}])
@@ -32,7 +32,7 @@ export const CartProvider = ({children}) => {
     }
 
     const inList = (id) => {//Busca si el item ya esta en el cart
-        return cart.some(item => item.product.id == id)
+        return cart.some(item => item.product.id === id)
     }
     const refreshNum = () => {//actualiza el numero
         const cartNum = cart.reduce((acumulador, {cantidad}) => acumulador + cantidad, 0);

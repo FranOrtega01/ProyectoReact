@@ -30,10 +30,10 @@ export const ItemDetail = ({producto}) => {
         }
     
     function imgChangeFwd(){
-        currentImg == (producto.img.length - 1) ? setCurrentImg(0) : setCurrentImg(currentImg + 1)
+        currentImg === (producto.img.length - 1) ? setCurrentImg(0) : setCurrentImg(currentImg + 1)
     }
     function imgChangeBack(){
-        currentImg == 0 ? setCurrentImg(producto.img.length - 1) : setCurrentImg(currentImg - 1)
+        currentImg === 0 ? setCurrentImg(producto.img.length - 1) : setCurrentImg(currentImg - 1)
     }
 
     return(
